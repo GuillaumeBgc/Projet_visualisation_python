@@ -330,7 +330,8 @@ tile_provider = get_provider(Vendors.CARTODBPOSITRON)
 p4.add_tile(tile_provider)
 print(df_port)
 #Création des multipolygones pour les zones
-p4.multi_polygons('coordx', 'coordy', source=source1)
+p4.multi_polygons('coordx', 'coordy', source=source1,color = 'navy', fill_color='navy',
+                     fill_alpha = 0.3)
 hover_tool = HoverTool(tooltips=[('Site', '@site'),('Concessions', '@concession')])
 p4.add_tools(hover_tool)
 
