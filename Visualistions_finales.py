@@ -25,7 +25,7 @@ div_entete = Div(
                  , width=1500, height=100)
 par_entete=Div(text="""<p>Cette page a pour objectif de présenter les ports appartenant à la région Bretagne à travers différents graphiques 
                et cartes. Les différentes visualisations ont pour objectifs de donner quelques repères géographiques, économiques et logistiques sur une selection
-               de ports de la région Bretagne. Ces derniers sont de véritables aujourd'hui de véritables acteurs du développement touristiques, économique ou encore culturel de la région, 
+               de ports de la région Bretagne. Ces derniers sont de véritables aujourd'hui de véritables acteurs du développement touristiques, économique ou encore culturel de la région. 
                </p><hr style="width:1500px">""", height=50)
 
 
