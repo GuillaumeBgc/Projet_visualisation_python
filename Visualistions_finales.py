@@ -4,7 +4,7 @@ from bokeh.models import HoverTool, CustomJS, DateRangeSlider, Div, Paragraph, D
 from bokeh.palettes import Set1
 from datetime import date
 from bokeh.layouts import row, column 
-from bokeh.plotting import figure, show, ColumnDataSource
+from bokeh.plotting import figure, show, ColumnDataSource,output_file
 import numpy as np
 from bokeh.palettes import Category10, Category20
 from bokeh.transform import cumsum
@@ -403,4 +403,6 @@ layout = column(div_image,div_entete,par_entete,row(p2,column(par2, div2)), Div(
                 row( column(par1, date_range_slider, div1),p1),Div(text="""<hr style="width:1500px">"""),
                 row(pie_chart, column(par3,select , div3)), Div(text="""<hr style="width:1500px">"""),
                 row(column(par4, menu), p4),Div(text="""<hr style="width:1500px">"""),div_pp)
+output_file(filename=("index.html"))
+
 show(layout)
