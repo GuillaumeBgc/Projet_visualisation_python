@@ -73,7 +73,7 @@ source = ColumnDataSource(df2)
 
 #Création de la carte
 p2 = figure(margin=(10,0,10,0),width=1100,height=600,x_axis_type="mercator", y_axis_type="mercator", active_scroll="wheel_zoom", title="Ports appartenant à la région Bretagne",  tools="pan,wheel_zoom,box_zoom,reset")
-tile_provider = get_provider(Vendors.WIKIMEDIA)
+tile_provider = get_provider(Vendors.CARTODBPOSITRON)
 p2.add_tile(tile_provider)
 
 #Création des éléments graphiques représentant les ports
@@ -328,7 +328,7 @@ source1 = ColumnDataSource(df_port)
 p4 = figure(margin=(10,0,10,0),width=1100,height=600,x_axis_type="mercator", y_axis_type="mercator", active_scroll="wheel_zoom", title="Zones portuaires et concessions de la région Bretagne",  tools="pan,wheel_zoom,box_zoom,reset")
 tile_provider = get_provider(Vendors.WIKIMEDIA)
 p4.add_tile(tile_provider)
-
+print(df_port)
 #Création des multipolygones pour les zones
 p4.multi_polygons('coordx', 'coordy', source=source1)
 hover_tool = HoverTool(tooltips=[('Site', '@site'),('Concessions', '@concession')])
@@ -388,7 +388,7 @@ p4.outline_line_color = "navy"
 p4.toolbar.logo = None
 
 #texte
-par4 = Paragraph(text="""Carte représentant les différentes zones portuaires associées au choix du port. Pour chaque zone, vous trouverez le nom du site et la concession associée.""",margin=(100,30,0,30))
+par4 = Paragraph(text="""Carte représentant les différentes zones portuaires associées au choix du port. Pour chaque zone, vous trouverez le nom du site et la concession associée. (parfois nécéssaire de rafraîchir le graphique pour afficher correctement)""",margin=(100,30,0,30))
 
 
 # PIED DE PAGE
