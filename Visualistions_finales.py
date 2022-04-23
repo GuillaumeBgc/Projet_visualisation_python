@@ -326,7 +326,7 @@ source1 = ColumnDataSource(df_port)
 
 #Creation de la carte
 p4 = figure(margin=(10,0,10,0),width=1100,height=600,x_axis_type="mercator", y_axis_type="mercator", active_scroll="wheel_zoom", title="Zones portuaires et concessions de la région Bretagne",  tools="pan,wheel_zoom,box_zoom,reset")
-tile_provider = get_provider(Vendors.WIKIMEDIA)
+tile_provider = get_provider(Vendors.CARTODBPOSITRON)
 p4.add_tile(tile_provider)
 print(df_port)
 #Création des multipolygones pour les zones
